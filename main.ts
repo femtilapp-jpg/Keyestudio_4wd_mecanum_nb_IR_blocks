@@ -1,8 +1,14 @@
-let val = 0
-irRemote.connectInfrared(DigitalPin.P0)
-basic.showIcon(IconNames.Yes)
-basic.forever(function () {
-    val = irRemote.returnIrButton()
-    serial.writeValue("IR", val)
-    basic.pause(1000)
-})
+{
+    "name": "ks-ir-friendly",
+    "version": "0.0.1",
+    "description": "Barnevennlige IR-blokker for Keyestudio-biler",
+    "dependencies": {
+        "core": "*",
+        "microbit": "*",
+        "IrRemote": "github:…/IrRemote#vX.Y.Z"
+    },
+    "files": [
+        "main.ts"
+    ],
+    "public": true
+}
